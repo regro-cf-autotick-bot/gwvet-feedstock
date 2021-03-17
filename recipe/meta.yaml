@@ -1,18 +1,18 @@
 {% set name = "gwvet" %}
-{% set version = "0.1.4" %}
+{% set version = "1.0.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "b0a42c1e2ce0d1ba4941e56e92144aad707fc7a7d6a2b71eeb280f70f570f5c4"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 76db8c29b2140a38d0dbf426040a3c5fe91a0b2eb18822861f054df91bc8c352
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -50,13 +50,13 @@ test:
     - gwvet-vdf --help
 
 about:
-  home: "https://github.com/gwpy/vet"
-  doc_url: "https://github.com/gwpy/vet/blob/master/README.rst"
-  dev_url: "https://github.com/gwpy/vet"
-  license: "GPL-3.0-or-later"
-  license_family: "GPL"
-  license_file: "LICENSE"
-  summary: "Gravitational-wave Veto Evaluation and Testing suite"
+  home: https://github.com/gwpy/vet
+  doc_url: https://github.com/gwpy/vet/blob/master/README.rst
+  dev_url: https://github.com/gwpy/vet
+  license: GPL-3.0-or-later
+  license_family: GPL
+  license_file: LICENSE
+  summary: Gravitational-wave Veto Evaluation and Testing suite
   description: |
     GWVET is an extension to the python toolbox GWSumm, used by the LIGO
     Scientific Collaboration to review and evaluate data-quality veto products
