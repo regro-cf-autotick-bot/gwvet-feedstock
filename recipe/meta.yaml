@@ -39,10 +39,12 @@ test:
     - gwvet
     - gwvet.cli
     - gwvet.etg
+    - gwvet.hug
     - gwvet.metric
     - gwvet.segments
     - gwvet.tabs
     - gwvet.triggers
+    - gwvet.vdf
   commands:
     # check scripts run ok
     - python -m gwvet --help
