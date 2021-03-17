@@ -1,5 +1,5 @@
 {% set name = "gwvet" %}
-{% set version = "0.1.4" %}
+{% set version = "1.0.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "b0a42c1e2ce0d1ba4941e56e92144aad707fc7a7d6a2b71eeb280f70f570f5c4"
+  sha256: "76db8c29b2140a38d0dbf426040a3c5fe91a0b2eb18822861f054df91bc8c352"
 
 build:
   number: 0
@@ -17,21 +17,21 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python >=3.6
     - setuptools
   run:
-    - astropy >=1.2.1
+    - astropy >=3.0.0
     - decorator
     - dqsegdb
-    - gwdetchar >=1.0.0
-    - gwpy >=1.0.0
-    - gwsumm >=1.0.1
+    - gwdetchar >=2.0.0
+    - gwpy >=2.0.0
+    - gwsumm >=2.0.0
     - gwtrigfind
     - lscsoft-glue >=1.60.0
     - markuppy
-    - matplotlib-base >=2.0.0
-    - numpy >=1.10
-    - python >=3
+    - matplotlib-base >=3.1.0
+    - numpy >=1.16
+    - python >=3.6
     - scipy >=1.2.0
 
 test:
@@ -45,9 +45,9 @@ test:
     - gwvet.triggers
   commands:
     # check scripts run ok
-    - gwvet --help
-    - gwvet-hug --help
-    - gwvet-vdf --help
+    - python -m gwvet --help
+    - python -m gwvet.hug --help
+    - python -m gwvet.vdf --help
 
 about:
   home: "https://github.com/gwpy/vet"
@@ -64,3 +64,6 @@ about:
 extra:
   recipe-maintainers:
     - alurban
+    - areeda
+    - eagoetz
+    - robertbruntz
