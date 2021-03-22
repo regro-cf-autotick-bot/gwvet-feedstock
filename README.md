@@ -123,4 +123,8 @@ Feedstock Maintainers
 =====================
 
 * [@alurban](https://github.com/alurban/)
+* [@areeda](https://github.com/areeda/)
+* [@duncanmmacleod](https://github.com/duncanmmacleod/)
+* [@eagoetz](https://github.com/eagoetz/)
+* [@robertbruntz](https://github.com/robertbruntz/)
 
