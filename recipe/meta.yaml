@@ -1,5 +1,5 @@
 {% set name = "gwvet" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "76db8c29b2140a38d0dbf426040a3c5fe91a0b2eb18822861f054df91bc8c352"
+  sha256: "079320be1852561a84f9c0f6c5b485da288ee6ee543f987b27f3d22986897061"
 
 build:
   number: 0
